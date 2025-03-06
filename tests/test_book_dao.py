@@ -2,9 +2,9 @@ from book_dao import BookDAO
 from book import Book
 
 class TestBookDAO:
-    def setup_method(self): # Denna metod används i samband med testning i python och för vårat testbiblotek
-        self.dao = BookDAO("test_db.sqlite") # Denna rad skapar ett nytt objekt av klassen BookDAO
-        self.dao.clear_table() # Denna rad rensar tabellen så att den är tom och att vi säkerställer att det inte finns någon data innan man kör ett nytt test
+    def setup_method(self):
+        self.dao = BookDAO("test_db.sqlite")
+        self.dao.clear_table()
         
 
         self.dao.insert_book(Book("Book1", "ABCD", "Karl Franz"))
