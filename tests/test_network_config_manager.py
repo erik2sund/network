@@ -49,22 +49,3 @@ class TestNetworkConfigManager:
             result = self.config_manager.show_response_prefix()
             assert result == "response_prefix: Abnormal Response", f"Förväntade 'response_prefix: Abnormal Response', men fick {result}"
 
-
-"""
-# SSH-relaterad kod för att ansluta till servern
-server = {
-    "device_type": "linux",
-    "ip": "127.0.0.1",
-    "username": "admin",
-    "password": "password",
-    "port": 2222,
-}
-
-net_connect = ConnectHandler(**server)
-print("Connected to server")
-
-# Skicka kommando till servern för att hämta hostnamnet
-command = "cat /etc/config/hostname/config.txt"
-output = net_connect.send_command(command)
-print(f"Output from command: {output}")  # Här printar vi resultatet från kommandot
-"""
